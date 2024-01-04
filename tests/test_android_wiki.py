@@ -4,11 +4,11 @@ from selene import browser, have
 
 
 def test_search_wiki(android_mobile_management):
-    with step('Tap on the skip button'):
-        browser.element((AppiumBy.ID, 'org.wikipedia:id/fragment_onboarding_skip_button')).click()
+    #with step('Tap on the skip button'):
+        #browser.element((AppiumBy.ID, 'org.wikipedia:id/fragment_onboarding_skip_button')).click()
 
     with step('Type search'):
-        browser.element((AppiumBy.ACCESSIBILITY_ID, "Search Wikipedia")).click()
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_container")).click()
         browser.element((AppiumBy.ID, "org.wikipedia:id/search_src_text")).type(
             'Appium')  # org.wikipedia.alpha:id/search_src_text
 
