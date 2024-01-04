@@ -19,7 +19,7 @@ def android_mobile_management():
         "deviceName": "Samsung Galaxy S23 Ultra",
 
         # Set URL of the application under test
-        "app": "bs://58da139db09c834c1f23f7cb563ecf27fea250f4",
+        "app": "bs://70b0ff34b4609a51f5d135f403c0d2429003624a",
 
         # Set other BrowserStack capabilities
         'bstack:options': {
