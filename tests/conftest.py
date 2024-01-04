@@ -1,4 +1,3 @@
-import os
 import allure
 import allure_commons
 from appium import webdriver
@@ -20,7 +19,7 @@ def android_mobile_management():
         "deviceName": "Samsung Galaxy S23 Ultra",
 
         # Set URL of the application under test
-        "app": "bs://c1c52615799e5efca0852cc5e27e222eb04bb041",
+        "app": "bs://58da139db09c834c1f23f7cb563ecf27fea250f4",
 
         # Set other BrowserStack capabilities
         'bstack:options': {

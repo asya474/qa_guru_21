@@ -1,7 +1,6 @@
 import allure, os
 import requests
-from dotenv import load_dotenv
-from selene import browser, support
+from selene import browser
 
 
 def attach_bstack_video(session_id):
