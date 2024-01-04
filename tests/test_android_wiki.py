@@ -4,13 +4,12 @@ from selene import browser, have
 
 
 def test_search_wiki(android_mobile_management):
-    #with step('Tap on the skip button'):
-        #browser.element((AppiumBy.ID, 'org.wikipedia:id/fragment_onboarding_skip_button')).click()
+    with step('Press Skip button'):
+        browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/fragment_onboarding_skip_button')).click()
 
     with step('Type search'):
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_container")).click()
-        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type(
-            'Appium')  # org.wikipedia.alpha:id/search_src_text
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type('Appium')
 
     with step('Verify content found'):
         results = browser.all((AppiumBy.ID, 'org.wikipedia.alpha:id/page_list_item_title'))
@@ -18,15 +17,13 @@ def test_search_wiki(android_mobile_management):
         results.first.should(have.text('Appium'))
 
 
-# com.android.chrome:id/title_url_container
 def test_open_some_article(android_mobile_management):
-    #with step('Tap on the skip button'):
-        #browser.element((AppiumBy.ID, 'org.wikipedia:id/fragment_onboarding_skip_button')).click()
+    with step('Press Skip button'):
+        browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/fragment_onboarding_skip_button')).click()
 
     with step('Open wiki and search the article'):
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_container")).click()
-        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type(
-            'Japan')  # android.widget.TextView
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type('Japan')
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/page_list_item_title")).click()
 
     with step('Verify article found'):
